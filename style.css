@@ -1,0 +1,41 @@
+/* style.css */
+
+/* Glow effect for headlines */
+.glow {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  
+  /* Feature hover effect */
+  .feature:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+  }
+  
+  /* Progress bar for waitlist */
+  .progress-bar {
+    background-color: #333;
+    height: 20px;
+    border-radius: 10px;
+  }
+  .progress {
+    background-color: #0f0;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Button hover and focus effects */
+  button:hover {
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+  }
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.5);
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #111;
+    color: white;
+    scroll-behavior: smooth;
+  }
