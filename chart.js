@@ -1,11 +1,10 @@
-// Growth Chart
 const ctx = document.getElementById('growthChart').getContext('2d');
 const growthChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['Day 0', 'Day 30', 'Day 60', 'Day 90'],
         datasets: [{
-            label: 'Your Money ($)',
+            label: 'Your Cash on AI Steroids ($)',
             data: [20, 200, 2000, 20000],
             borderColor: '#0f0',
             backgroundColor: 'rgba(0, 255, 0, 0.3)',
@@ -18,11 +17,7 @@ const growthChart = new Chart(ctx, {
         scales: {
             y: {
                 type: 'logarithmic',
-                ticks: {
-                    callback: function(value) {
-                        return '$' + value;
-                    }
-                }
+                ticks: { callback: (value) => '$' + value }
             }
         },
         plugins: {
