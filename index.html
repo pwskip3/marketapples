@@ -3,30 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Apples - Web3 AI Trading</title>
+    <meta name="description" content="Market Apples - Join the AI trading revolution! Transform $20 into $20,000 with our automated crypto trading platform. Sign up for early access now!">
+    <meta name="keywords" content="AI trading system, automated trading, crypto trading platform, Market Apples AI, wealth growth">
+    <title>Market Apples - Fun AI Trading Adventure</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <h1 class="neon-text">Market Apples</h1>
-            <p class="neon-subtext">Revolutionize Trading with AI and Web3</p>
-            <a href="#join" class="cta neon-button">Join the Waitlist</a>
+            <h1 class="neon-text">Market Apples 🍎</h1>
+            <p class="neon-subtext">A Cute & Clever AI Trading Adventure Awaits!</p>
+            <a href="#join" class="cta neon-button bounce">Join the Fun!</a>
         </div>
     </header>
-    <main>
-        <section class="features container">
-            <h2 class="neon-text">Why Choose Us?</h2>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="neon-text">What Makes Us Awesome?</h2>
             <div class="feature-grid">
-                <div class="feature-card neon-glow">AI-Powered Trading</div>
-                <div class="feature-card neon-glow">Decentralized Access</div>
-                <div class="feature-card neon-glow">Real-Time Insights</div>
+                <div class="feature-item neon-glow">💡 AI-Powered Magic</div>
+                <div class="feature-item neon-glow">🌟 Community Vibes</div>
+                <div class="feature-item neon-glow">📈 Epic Results</div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Growth Chart Section -->
+    <section class="chart">
+        <div class="container">
+            <h2 class="neon-text">Watch Your Money Grow! 🌱</h2>
+            <canvas id="growthChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="neon-text">Our Happy Traders Say...</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">"$20 to $200 in a week—so fun!" - Alex T.</div>
+                <div class="testimonial-item">"This AI is my new BFF!" - Jane S.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="join" class="waitlist">
+        <div class="container">
+            <h2 class="neon-text">Hop on the Waitlist! 🚀</h2>
+            <p>Stay in the loop for our upcoming AI trading system!</p>
+            <form id="waitlistForm">
+                <input type="email" placeholder="Your email, pretty please!" required>
+                <button type="submit" class="neon-button bounce">Sign Me Up!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Chat with us: <a href="https://twitter.com" class="neon-link">Twitter</a> | <a href="https://discord.com" class="neon-link">Discord</a></p>
+            <p><a href="donate.html" class="neon-link">Support Us!</a> © 2023 Market Apples. All the fun reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="chart.js"></script>
 </body>
 </html>
