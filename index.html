@@ -1,152 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Market Apples AI - Unlock Infinite Wealth</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Apples - Web3 AI Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="bg-gray-800 p-4 sticky top-0 z-10">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-white text-2xl font-bold">Market Apples AI</a>
-      <div class="hidden md:flex space-x-4">
-        <a href="#home" class="text-white hover:text-green-500">Home</a>
-        <a href="#features" class="text-white hover:text-green-500">Features</a>
-        <a href="#chart" class="text-white hover:text-green-500">Growth</a>
-        <a href="#waitlist" class="text-white hover:text-green-500">Waitlist</a>
-        <a href="research-insights.html">Research Insights</a>
-      </div>
-      <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 p-4">
-      <a href="#home" class="block text-white py-2 hover:text-green-500">Home</a>
-      <a href="#features" class="block text-white py-2 hover:text-green-500">Features</a>
-      <a href="#chart" class="block text-white py-2 hover:text-green-500">Growth</a>
-      <a href="#waitlist" class="block text-white py-2 hover:text-green-500">Waitlist</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero bg-gray-900 text-white py-20">
-    <div class="container mx-auto flex flex-col md:flex-row items-center px-4">
-      <div class="md:w-1/2">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 glow">Unlock Infinite Wealth with Market Apples AI!</h1>
-        <p class="text-lg md:text-xl mb-8">Your Badass AI Trading Buddy, Predicting Markets Like a Pro!</p>
-        <a href="#waitlist" class="bg-green-500 text-black px-6 py-3 rounded-lg font-bold inline-block">Join the Trading Party—Let’s Make Bank!</a>
-      </div>
-      <div class="md:w-1/2 mt-10 md:mt-0">
-        <img src="https://via.placeholder.com/500x300?text=Robot+Trading" alt="Robot trading with lasers" class="w-full rounded-lg">
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features bg-gray-800 py-20">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Why Choose Market Apples AI?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="feature text-center p-6 bg-gray-700 rounded-lg" data-aos="fade-up">
-          <i class="fas fa-chart-line text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Real-Time Data Analysis</h3>
-          <p>Stay ahead with lightning-fast market data updates.</p>
+    <header class="hero">
+        <div class="container">
+            <h1 class="neon-text">Market Apples</h1>
+            <p class="neon-subtext">Revolutionize Trading with AI and Web3</p>
+            <a href="#join" class="cta neon-button">Join the Waitlist</a>
         </div>
-        <div class="feature text-center p-6 bg-gray-700 rounded-lg" data-aos="fade-up">
-          <i class="fas fa-comments text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Social Media Sentiment</h3>
-          <p>Tap into the buzz—know what the crowd thinks.</p>
-        </div>
-        <div class="feature text-center p-6 bg-gray-700 rounded-lg" data-aos="fade-up">
-          <i class="fas fa-brain text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">AI-Driven Predictions</h3>
-          <p>Let our AI genius predict market moves like a pro.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chart Section -->
-  <section id="chart" class="chart bg-gray-900 py-20">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">How $20 Grows to $20,000 in 90 Days</h2>
-      <canvas id="growthChart" class="max-w-full mx-auto"></canvas>
-    </div>
-  </section>
-
-  <!-- Waitlist Section -->
-  <section id="waitlist" class="waitlist bg-gray-800 py-20">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-3xl font-bold mb-4 glow">Join the Waitlist</h2>
-      <p class="mb-8">Be the first to dominate the markets with us!</p>
-      <form action="https://formspree.io/f/xdkekpzd" method="POST" class="max-w-md mx-auto">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full mb-4 p-2 rounded text-black">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full mb-4 p-2 rounded text-black">
-        <button type="submit" class="bg-green-500 text-black px-6 py-3 rounded-lg font-bold">Join the Trading Party—Let’s Make Bank!</button>
-        <input type="hidden" name="_next" value="https://marketapples.qcehub.com/thank-you.html">
-<input type="hidden" name="_subject" value="New Waitlist Submission">
-      </form>
-      <div class="progress-bar mt-4 max-w-md mx-auto">
-        <div class="progress" style="width: 50%;"></div>
-      </div>
-      <p class="mt-2">500/1000 spots taken—grab yours now!</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-10">
-    <div class="container mx-auto text-center px-4">
-      <p>© 2024 Market Apples AI Trading System. All rights reserved. Trading involves risk not a financial institution.</p>
-      <div class="mt-4">
-        <a href="https://facebook.com" class="text-white mx-2 hover:text-green-500"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" class="text-white mx-2 hover:text-green-500"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" class="text-white mx-2 hover:text-green-500"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Chart.js
-    const ctx = document.getElementById('growthChart').getContext('2d');
-    const growthChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Day 0', 'Day 30', 'Day 60', 'Day 90'],
-        datasets: [{
-          label: 'Balance ($)',
-          data: [20, 200, 2000, 20000],
-          borderColor: '#0f0',
-          backgroundColor: 'rgba(0, 255, 0, 0.1)',
-          fill: true
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            type: 'logarithmic',
-            ticks: { callback: value => `$${value}` }
-          }
-        }
-      }
-    });
-
-    // AOS Animation
-    AOS.init({ duration: 800 });
-  </script>
+    </header>
+    <main>
+        <section class="features container">
+            <h2 class="neon-text">Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card neon-glow">AI-Powered Trading</div>
+                <div class="feature-card neon-glow">Decentralized Access</div>
+                <div class="feature-card neon-glow">Real-Time Insights</div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
