@@ -1,7 +1,6 @@
-// Waitlist Form Submission
-document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+document.getElementById('waitlistForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = this.querySelector('input').value;
-    alert(`Yay! ${email} is on the waitlist! We’ll send you all the juicy updates! 🍎`);
-    this.reset();
+    const email = e.target.querySelector('input').value;
+    alert(`Boom! ${email}, you’re on the list! Expect epic updates and zero spam—pinky promise.`);
+    e.target.reset();
 });
