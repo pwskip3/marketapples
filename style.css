@@ -1,32 +1,29 @@
-/* General Styles */
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #111;
+    background: #111;
     color: #fff;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Neon Effects */
+/* Neon Vibes */
 .neon-text {
     color: #00ccff;
     text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 25px #7a00ff;
+    font-family: 'Orbitron', sans-serif;
 }
-
 .neon-subtext {
     color: #e0e0e0;
     text-shadow: 0 0 3px #0f0, 0 0 10px #0f0;
 }
-
 .neon-button {
-    background: transparent;
+    background: none;
     color: #0f0;
     border: 2px solid #0f0;
     padding: 12px 25px;
@@ -34,51 +31,53 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .neon-button:hover {
     background: #0f0;
     color: #000;
     box-shadow: 0 0 15px #0f0, 0 0 30px #7a00ff;
 }
-
 .bounce {
     animation: bounce 2s infinite;
 }
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-10px); }
     60% { transform: translateY(-5px); }
 }
-
 .neon-glow {
     transition: all 0.3s ease;
 }
-
 .neon-glow:hover {
     box-shadow: 0 0 15px #00ccff, 0 0 25px #7a00ff;
     transform: scale(1.05);
 }
+.neon-link {
+    color: #0f0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.neon-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #0f0;
+}
 
-/* Hero Section */
+/* Hero */
 .hero {
     background: linear-gradient(135deg, #00f, #0f0);
     padding: 120px 0;
     text-align: center;
 }
 
-/* Features Section */
+/* Features */
 .features {
     padding: 80px 0;
-    background-color: #222;
+    background: #222;
 }
-
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
-
 .feature-item {
     padding: 25px;
     background: #333;
@@ -86,24 +85,25 @@ body {
     text-align: center;
 }
 
-/* Chart Section */
+/* Chart */
 .chart {
     padding: 80px 0;
     text-align: center;
 }
-
-/* Testimonials Section */
-.testimonials {
-    padding: 80px 0;
-    background-color: #222;
+canvas {
+    max-width: 100%;
 }
 
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background: #222;
+}
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
-
 .testimonial-item {
     padding: 25px;
     background: #333;
@@ -111,30 +111,31 @@ body {
     text-align: center;
 }
 
-/* Waitlist Section */
+/* Waitlist */
 .waitlist {
     padding: 80px 0;
     background: linear-gradient(135deg, #0f0, #00f);
     text-align: center;
 }
-
 .waitlist form {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
 }
-
 .waitlist input {
     padding: 12px;
     border: none;
     border-radius: 8px;
     width: 280px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.waitlist button {
-    padding: 12px 25px;
+/* Donation Content */
+.donation-content {
+    padding: 80px 0;
+    text-align: center;
+    background: #222;
 }
 
 /* Footer */
@@ -144,13 +145,8 @@ footer {
     text-align: center;
 }
 
-.neon-link {
-    color: #0f0;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.neon-link:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #0f0;
+/* Responsive */
+@media (max-width: 768px) {
+    .waitlist form { flex-direction: column; align-items: center; }
+    .waitlist input { width: 100%; max-width: 300px; }
 }
