@@ -1,41 +1,105 @@
-/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Glow effect for headlines */
-.glow {
-    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
-  }
-  
-  /* Feature hover effect */
-  .feature:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s;
-  }
-  
-  /* Progress bar for waitlist */
-  .progress-bar {
-    background-color: #333;
-    height: 20px;
-    border-radius: 10px;
-  }
-  .progress {
-    background-color: #0f0;
-    height: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Button hover and focus effects */
-  button:hover {
-    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
-  }
-  button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.5);
-  }
-  
-  /* Body styles */
-  body {
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
     font-family: 'Orbitron', sans-serif;
-    background-color: #111;
-    color: white;
-    scroll-behavior: smooth;
-  }
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0a0a0a, #1a2a6c, #0a0a0a);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 102, 255, 0.2), transparent 70%);
+    z-index: 0;
+}
+
+.neon-text {
+    color: #00ccff;
+    text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 25px #7a00ff, 0 0 40px #7a00ff;
+    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.neon-subtext {
+    color: #e0e0e0;
+    text-shadow: 0 0 3px #00ccff, 0 0 10px #00ccff;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.neon-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    color: #00ccff;
+    border: 2px solid #00ccff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 5px #00ccff;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.neon-button:hover {
+    background: #00ccff;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #00ccff, 0 0 30px #7a00ff;
+    text-shadow: none;
+}
+
+.features {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    padding: 20px;
+    background: #1a1a1a;
+    border: 1px solid #00ccff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.neon-glow {
+    transition: all 0.3s ease;
+}
+
+.neon-glow:hover {
+    box-shadow: 0 0 15px #00ccff, 0 0 25px #7a00ff;
+    transform: translateY(-5px);
+}
